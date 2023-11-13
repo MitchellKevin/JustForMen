@@ -1,24 +1,32 @@
 body{
-    background: url(https://assets.eposnow.com/public/blog-images/is-owning-a-barber-shop-profitable-v3.jpg) no-repeat;
+    background-image: url('iconen/bg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: 3;
     margin: 0;
+}
+.bg{
+    z-index: -1;
+    width: 100%;
 }
 /* Header */
 header {
     z-index: 2;
-    border: 3px solid #FDE5D4;
+    /* border: 3px solid #ffffff; */
     position: fixed;  
     left: 5px;  
     right: 5px;  
     top: 10px;  
-    height: 6em;  
+    height: 8em;  
     display: flex; 
     align-items: center;  
-    justify-content: center;
-    box-shadow: 0 0 25px 0 #D6CC99;
+    justify-content: flex-end;
+    /* box-shadow: 0 0 25px 0 #7a7a7a; */
     border-radius: 1.5625em;
 }
 header * {  
-    display: flex;  
+    display: flex;
     }  
     header li {  
     margin: 0.5em;  
@@ -35,6 +43,31 @@ header * {
     }
 
 header img{
-        width: 4em;
-        height: 4em;
+        width: 6em;
+        height: 6em;
     }
+header p{
+    font-size: 1.5em;
+    margin-right: 1.5em;
+}
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+article h1{
+    color: rgb(255, 255, 255);
+    font-size: 15em;
+}
+article a{
+    text-decoration: none;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10em;
+    height: 3em;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+}
