@@ -1,73 +1,90 @@
-body{
-    background-image: url('iconen/bg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    z-index: 3;
-    margin: 0;
+:root{
+    --primary-color: #ffffff;
+    --secondary-color: #55e4b9;
+    --font-family: 'Arial, sans-serif';
 }
-.bg{
-    z-index: -1;
-    width: 100%;
-}
-/* Header */
-header {
-    z-index: 2;
-    /* border: 3px solid #ffffff; */
-    position: fixed;  
-    left: 5px;  
-    right: 5px;  
-    top: 10px;  
-    height: 8em;  
-    display: flex; 
-    align-items: center;  
-    justify-content: flex-end;
-    /* box-shadow: 0 0 25px 0 #7a7a7a; */
-    border-radius: 1.5625em;
-}
-header * {  
-    display: flex;
-    }  
-    header li {  
-    margin: 0.5em;  
-    }  
-    header li a {  
-    color: rgb(255, 255, 255);  
-    text-decoration: none;  
-    }  
-    header a{
-        font-size: 20px;
-    }
-    header a:hover{
-        color: grey;
-    }
 
-header img{
-        width: 6em;
-        height: 6em;
-    }
-header p{
-    font-size: 1.5em;
-    margin-right: 1.5em;
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    color: rgb(0, 0, 0);
 }
-article{
+
+/* Header */
+header{
+    margin: 1.5em;
+    position: sticky;
+    top: 2em;
+}
+
+nav{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    font-size: 1.2em;
+    margin-right: 1.2em;
+}
+
+nav ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+/* Hero */
+.hero{
+    display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
     flex-direction: column;
 }
-article h1{
-    color: rgb(255, 255, 255);
-    font-size: 15em;
+
+.hero h1{
+    font-size: 2.5em;
+    margin-bottom: 0;
 }
-article a{
-    text-decoration: none;
-    font-size: 2em;
+
+/* Description */
+.description-section{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 10em;
-    height: 3em;
-    color: rgb(255, 255, 255);
-    background-color: #000000;
+    flex-direction: column;
 }
+
+.description-section article:nth-of-type(1){
+    margin: 2em;
+    text-align: center;
+}
+
+.description-section h3{
+    text-align: center;
+}
+
+.divider{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+}
+.divider article:nth-of-type(1){
+    text-align: start;
+    width: 500px;
+}
+

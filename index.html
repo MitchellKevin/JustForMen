@@ -1,52 +1,79 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHdIxmtoh_pu5NaW-eKvlyvFQV9lcEqCc&callback=initMap" async defer></script>
 </head>
 <body>
-    <header>  
-        <nav>   
+    <header>
+        <nav>
+            <img src="logo.png" alt="Logo" class="logo">
             <ul>
-                <li>  
-                    <a href="index.html">
-                        <!-- <img src="iconen/logo.png" class="icon"> -->
-                        <p>Home</p>
-                    </a> 
-                </li>    
-                <li>  
-                    <a href="sidePages/opening_hours.html">
-                        <!-- <img src="iconen/opening_hours_icon.png" class="icon"> -->
-                        <p>Openings tijden</p>
-                    </a>  
-                </li>  
-                <li>  
-                    <a href="sidePages/meeting.html">
-                        <!-- <img src="iconen/meeting_icon.png" class="icon"> -->
-                        <p>Afspraak maken</p>
-                    </a>
-                </li>  
-                <li> 
-                    <a href="sidePages/price.html">
-                        <!-- <img src="iconen/price_icon.png" class="icon"> -->
-                        <p>Prijzen</p>
-                    </a> 
-                </li>  
-                <li>  
-                    <a href="sidePages/crew.html">
-                        <!-- <img src="iconen/crew_icon.png" class="icon"> -->
-                        <p>Team</p>
-                    </a>
-                </li>  
-            </ul>  
+                <li><a href="#">Amstelveen</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Book Now</a></li>
+                <li><a href="#">Account</a></li>
+            </ul>
         </nav>
     </header>
-    <!-- <img src="iconen/bg" class="bg" height="960"> -->
-    <article>
-        <h1>Just For Man</h1>
-        <a href="sidePages/meeting.html">Maak Afspraak</a>
-    </article>
+    <main>
+        <section class="hero">
+            <h1>Welcome to Barbershop Just For Men</h1>
+            <p>Your satisfaction is our priority.</p>
+            <a href="#" class="btn">Book Now</a>
+        </section>
+        <section class="description-section">
+            <!-- Motivation CTA -->
+            <article>
+                <h2>DO YOURSELF A FAVOR</h2>
+                <p>Barbershop Just For Men is the grooming experience every man deserves - where traditional barbering and modern spa services meet your favorite watering hole. Sit back, relax, get groomed - then enjoy a cocktail, coffee, or cold one in our private lounge.Scissors & Scotch is the grooming experience every man deserves - where traditional barbering and modern spa services meet your favorite watering hole. Sit back, relax, get groomed - then enjoy a cocktail, coffee, or cold one in our private lounge.</p>
+                <span>Shop description</span>
+            </article>
+            <!-- Shop Description -->
+            <h3>Amstelveen, Netherlands</h3>
+            <section class="divider">
+            <article class="Description">
+                <h2>COME FROM THE GROOMING. <br>
+                    STAY FOR CONVERSATIONS.</h2>
+                <p>At Barbershop Just For Men, you’ll find friendly, talented people, an impressive offering of grooming services. What we like to refer to as: the best damn part of your day.</p>
+                <div class="location">
+                    <img src="location-icon.png" alt="Location Icon">
+                    <p>Address: Amsterdamseweg 123, 1182 HL Amstelveen, Netherlands</p>
+                </div>
+                <div class="phone">
+                    <img src="phone-icon.png" alt="Phone Icon">
+                    <p>Phone: +31 20 123 4567</p>
+                </div>
+                <div class="hours">
+                    <img src="hours-icon.png" alt="Hours Icon">
+                    <p>Monday // 9 to 8 <br> Tuesday // 9 to 8 <br>Wednesday // 9 to 8 <br>Thursday // 9 to 8 <br>Friday // 9 to 8 <br>Saturday // 9 to 8 <br>Sunday // 9 to 8</p>
+                </div>
+            </article>
+            <div id="map" style="height: 60%; width: 50%;"></div>
+            </section>
+        </section>
+    </main>
+    <footer></footer>
+
+    <script>
+        function initMap() {
+          const bourgondischelaan = { lat: 52.3076, lng: 4.8587 }; // Bourgondischelaan 36
+          const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 15,
+            center: bourgondischelaan,
+          });
+          new google.maps.Marker({
+            position: bourgondischelaan,
+            map: map,
+            title: "Barbershop Just For Men",
+          });
+        }
+    </script>
 </body>
 </html>
